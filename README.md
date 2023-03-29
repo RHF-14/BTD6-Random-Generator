@@ -1,5 +1,4 @@
 # README
-
 Generates up to 4 players with a random hero and up to 5 random monkeys!
 
 Also will pick a random map and difficulty.
