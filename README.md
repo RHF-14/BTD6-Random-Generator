@@ -10,4 +10,4 @@ I wanted users to still be able to choose paths for the monkeys as I think it ad
 The .exe file is under the "dist" directory. Run the .exe then use the gui to pick how many monkeys and a random map and mode. Then click Gen Player for each player you have in the game to choose a random hero and random monkeys for each player.
 
 # ANTIVIRUS
-YES
+Hates this program... sorry
