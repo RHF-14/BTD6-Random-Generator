@@ -9,7 +9,7 @@ from random import choice
 heroes = ("Quincy", "Gwendolin", "Striker Jones", "Obyn Greenfoot", "Geraldo", "Captain Churchill", "Benjamin", "Ezili", "Pat Fusty", "Adora", "Admiral Brickell ", "Etienne", "Sauda", "Psi")
 
 # tuple of monkeys
-standardMonkeys = ("Dart Monkey", "Boomerang Monkey", "Bomb Shooter", "Tack Shooter", "Ice Monkey", "Glue Gunner", "Sniper Monkey", "Monkey Sub", "Monkey Buccaneer", "Monkey Ace", "Heli Pilot", "Mortar Monkey","Dartling Gunner", "Wizard Monkey", "Super Monkey", "Ninja Monkey", "Alchemist", "Druid", "Banana Farm", "Spike Factory", "Monkey Village", "Engineer Monkey")
+allMonkeys = ("Dart Monkey", "Boomerang Monkey", "Bomb Shooter", "Tack Shooter", "Ice Monkey", "Glue Gunner", "Sniper Monkey", "Monkey Sub", "Monkey Buccaneer", "Monkey Ace", "Heli Pilot", "Mortar Monkey","Dartling Gunner", "Wizard Monkey", "Super Monkey", "Ninja Monkey", "Alchemist", "Druid", "Banana Farm", "Spike Factory", "Monkey Village", "Engineer Monkey", "Beast Handler")
 primaryMonkeys = ("Dart Monkey", "Boomerang Monkey", "Bomb Shooter", "Tack Shooter", "Ice Monkey", "Glue Gunner")
 militaryMonkeys = ("Sniper Monkey", "Monkey Sub", "Monkey Buccaneer", "Monkey Ace", "Heli Pilot", "Mortar Monkey","Dartling Gunner")
 magicMonkeys = ("Wizard Monkey", "Super Monkey", "Ninja Monkey", "Alchemist", "Druid")
@@ -56,13 +56,13 @@ def generateMonkeys(numMonkeys, mode): # generates one set of random monkeys, re
             returnArray.append(choice(magicMonkeys))
     elif(mode == "CHIMPS"): #removes banana farm since chimps does not allow it
         for j in range(1, (numMonkeys + 1)):
-            monkeyChoice = choice(standardMonkeys)
+            monkeyChoice = choice(allMonkeys)
             while (monkeyChoice == "Banana Farm"): #this while  ensures that there are no banana farms in selected monkeys
-                monkeyChoice = choice(standardMonkeys)
+                monkeyChoice = choice(allMonkeys)
             returnArray.append(monkeyChoice)
     else: #creates monkeys based on no monkey restrictions
         for j in range(1, (numMonkeys + 1)):
-            returnArray.append(choice(standardMonkeys))
+            returnArray.append(choice(allMonkeys))
     return returnArray
             
 def generateMap(mapSelect): # picks random map based on choice
