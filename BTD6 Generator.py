@@ -40,6 +40,7 @@ def generateHeroes(mode): # picks random hero
 
 def generateMonkeys(numMonkeys, mode): # generates one set of random monkeys, returns in an array
     
+    # ensures that if no other gamemode is selected, the most chimps is default
     if mode == None:
         mode = "CHIMPS"
     
@@ -132,7 +133,8 @@ layout = [
 gameMode = "CHIMPS"
 
 # creation of window
-window = gui.Window("BTD6 Monkey Generator", layout, size=(840, 340), icon=r'C:\Users\aiden\OneDrive\Visual Studio Code\z - Executables\BTD6 Generator\ParagonIcon.ico')
+window = gui.Window("BTD6 Monkey Generator", layout, size=(840, 340), icon=r"C:\Users\aiden\OneDrive\Visual Studio Code\z - Executables\BTD6 Generator\ParagonIcon.ico")
+
 
 # event loop
 while True:
@@ -232,6 +234,7 @@ while True:
         window["-MONKEY2-"].update("")
         window["-MONKEY3-"].update("")
         window["-MONKEY4-"].update("")
+        gameMode = "CHIMPS"
     
     #closing window
     if event == "Exit" or event == gui.WIN_CLOSED:
