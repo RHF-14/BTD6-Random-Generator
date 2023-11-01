@@ -21,8 +21,8 @@ hardModes = ("Hard", "Magic Monkeys Only", "Double HP Moabs", "Half Cash", "Alte
 
 # tuple of maps
 beginnerMaps = ("Monkey Meadow", "Tree Stump", "Town Center", "Middle of the Road", "One Two Tree", "Scrapyard", "The Cabin", "Resort", "Skates", "Lotus Island", "Candy Falls", "Winter Park", "Carved", "Park Path", "Alpine Run", "Frozen Over", "In The Loop", "Cubism", "Four Circles", "Hedge", "End Of The Road", "Logs")
-intermediateMaps = ("Covered Garden", "Quarry", "Quiet Street", "Bloonarius Prime", "Balance", "Encrypted", "Bazaar", "Adora's Temple", "Spring Spring", "KartsNDarts", "Moon Landing", "Haunted", "Downstream", "Firing Range", "Cracked", "Streambed", "Chutes", "Rake", "Spice Islands")
-advancedMaps = ("Midnight Mansion", "Sunken Columns", "X Factor", "Mesa", "Geared", "Spillway", "Cargo", "Pat's Pond", "Peninsula", "High Finance", "Another Brick", "Off The Coast", "Cornfield", "Underground")
+intermediateMaps = ("Water Park", "Polyphemus", "Covered Garden", "Quarry", "Quiet Street", "Bloonarius Prime", "Balance", "Encrypted", "Bazaar", "Adora's Temple", "Spring Spring", "KartsNDarts", "Moon Landing", "Haunted", "Downstream", "Firing Range", "Cracked", "Streambed", "Chutes", "Rake", "Spice Islands")
+advancedMaps = ("Dark Path", "Erosion", "Midnight Mansion", "Sunken Columns", "X Factor", "Mesa", "Geared", "Spillway", "Cargo", "Pat's Pond", "Peninsula", "High Finance", "Another Brick", "Off The Coast", "Cornfield", "Underground")
 expertMaps = ("Dark Dungeons", "Sanctuary", "Ravine", "Flooded Valley", "Infernal", "Bloody Puddles", "Workshop", "Quad", "Dark Castle", "Muddy Puddles", "#Ouch")
 
 #---------------#
@@ -40,7 +40,7 @@ def generateHeroes(mode): # picks random hero
 
 def generateMonkeys(numMonkeys, mode): # generates one set of random monkeys, returns in an array
     
-    # ensures that if no other gamemode is selected, the most chimps is default
+    # ensures that if no other gamemode is selected, the most restrictive is default
     if mode == None:
         mode = "CHIMPS"
     
@@ -136,7 +136,10 @@ gameMode = "CHIMPS"
 window = gui.Window("BTD6 Monkey Generator", layout, size=(840, 340), icon=r"C:\Users\aiden\OneDrive\Visual Studio Code\z - Executables\BTD6 Generator\ParagonIcon.ico")
 
 
-# event loop
+##############
+# EVENT LOOP #
+##############
+
 while True:
     event, values = window.read()
     
